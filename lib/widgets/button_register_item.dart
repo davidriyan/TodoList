@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:slicing_todo_app/pages/home_page.dart';
 import 'package:slicing_todo_app/pages/signin_page.dart';
 
 class buttonRegisterItem extends StatelessWidget {
@@ -25,7 +26,13 @@ class buttonRegisterItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             child: InkWell(
               onTap: () {
-                if (_formState.currentState!.validate()) {}
+                if (_formState.currentState!.validate()) {
+                  Navigator.pushReplacement(context, MaterialPageRoute(
+                    builder: (context) {
+                      return HomePage();
+                    },
+                  ));
+                }
               },
               child: Center(
                 child: Text(
