@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:slicing_todo_app/pages/register_page.dart';
+import './home_page.dart';
 
 class SigninPage extends StatefulWidget {
   SigninPage({super.key});
@@ -162,6 +163,12 @@ class _SigninPageState extends State<SigninPage> {
                             child: InkWell(
                               onTap: () {
                                 _formState.currentState!.validate();
+                                Navigator.pushReplacement(context,
+                                    MaterialPageRoute(
+                                  builder: (context) {
+                                    return HomePage();
+                                  },
+                                ));
                               },
                               child: Center(
                                 child: Text(
