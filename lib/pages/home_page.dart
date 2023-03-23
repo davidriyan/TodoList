@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomePage extends StatefulWidget {
+  HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   double lingkaran(BuildContext context) =>
       MediaQuery.of(context).size.width * 2 / 3;
+
+  bool checkbox = false;
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +53,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    //membuat fitur foto profile
                     Center(
                       child: Column(
                         children: [
@@ -76,6 +85,7 @@ class HomePage extends StatelessWidget {
                           SizedBox(
                             height: 24,
                           ),
+                          //membuat fitur text welcome (nama user)
                           Text(
                             'Welcome, David Riyan Kurniawan',
                             style: GoogleFonts.poppins(
@@ -97,7 +107,206 @@ class HomePage extends StatelessWidget {
                         style: GoogleFonts.poppins(
                             fontWeight: FontWeight.w600, fontSize: 18),
                       ),
-                    ))
+                    )),
+                SizedBox(height: 20),
+                Material(
+                  borderRadius: BorderRadius.circular(24),
+                  elevation: 25,
+                  child: Container(
+                    width: 323,
+                    height: 248,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(24)),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 26, horizontal: 21),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.vertical,
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  'Tasks List',
+                                  style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 14,
+                                      color: Colors.black54),
+                                ),
+                                Spacer(),
+                                GestureDetector(
+                                  onTap: () {},
+                                  child: SizedBox(
+                                    height: 20,
+                                    width: 20,
+                                    child: Image.asset(
+                                        'assets/images/iconadd.png'),
+                                  ),
+                                )
+                              ],
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 24.0, left: 6),
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    height: 10,
+                                    width: 10,
+                                    child: Checkbox(
+                                      activeColor: Colors.purple,
+                                      value: checkbox,
+                                      onChanged: (value) {
+                                        setState(() {
+                                          checkbox = !checkbox;
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 11.0),
+                                    child: Text(
+                                      'Cook Rice and Chicken at 10 am',
+                                      style: GoogleFonts.poppins(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 12,
+                                          color: Color.fromARGB(190, 0, 0, 0)),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 15.0, left: 6),
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    height: 10,
+                                    width: 10,
+                                    child: Checkbox(
+                                      activeColor: Colors.purple,
+                                      value: checkbox,
+                                      onChanged: (value) {
+                                        setState(() {
+                                          checkbox = !checkbox;
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 11.0),
+                                    child: Text(
+                                      'Cook Rice and Chicken at 10 am',
+                                      style: GoogleFonts.poppins(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 12,
+                                          color: Color.fromARGB(190, 0, 0, 0)),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 15.0, left: 6),
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    height: 10,
+                                    width: 10,
+                                    child: Checkbox(
+                                      activeColor: Colors.purple,
+                                      value: checkbox,
+                                      onChanged: (value) {
+                                        setState(() {
+                                          checkbox = !checkbox;
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 11.0),
+                                    child: Text(
+                                      'Cook Rice and Chicken at 10 am',
+                                      style: GoogleFonts.poppins(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 12,
+                                          color: Color.fromARGB(190, 0, 0, 0)),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 15.0, left: 6),
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    height: 10,
+                                    width: 10,
+                                    child: Checkbox(
+                                      activeColor: Colors.purple,
+                                      value: checkbox,
+                                      onChanged: (value) {
+                                        setState(() {
+                                          checkbox = !checkbox;
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 11.0),
+                                    child: Text(
+                                      'Cook Rice and Chicken at 10 am',
+                                      style: GoogleFonts.poppins(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 12,
+                                          color: Color.fromARGB(190, 0, 0, 0)),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 15.0, left: 6),
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    height: 10,
+                                    width: 10,
+                                    child: Checkbox(
+                                      activeColor: Colors.purple,
+                                      value: checkbox,
+                                      onChanged: (value) {
+                                        setState(() {
+                                          checkbox = !checkbox;
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 11.0),
+                                    child: Text(
+                                      'Cook Rice and Chicken at 10 am',
+                                      style: GoogleFonts.poppins(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 12,
+                                          color: Color.fromARGB(190, 0, 0, 0)),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ],
